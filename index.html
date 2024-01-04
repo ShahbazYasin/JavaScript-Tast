@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task</title>
+    <style>
+        p {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        button {
+            font-weight: bold;
+            width: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Tast</h1>
+    <p>Q # 01. Input two characters and print them on the next line in reverse order? </p>
+
+    <form>
+        <label>
+            Input-1:
+            <input type="number" id="input1">
+        </label>
+
+        <br><br>
+
+        <label>
+            Input-2:
+            <input type="number" id="input2">
+        </label><br><br>
+
+        <button type="submit" onclick="result(event)">Return</button>
+    </form>
+
+    <div id="result">
+
+    </div>
+
+    <p>Q # 02. Input two numbers swap them without using third variable and print them on the next line?</p>
+
+    <form>
+        <label>
+            Input-A:
+            <input type="number" id="inputA">
+        </label>
+
+        <br><br>
+
+        <label>
+            Input-B:
+            <input type="number" id="inputB">
+        </label><br><br>
+
+
+        <div id="result">
+
+        </div>
+
+
+        <button type="submit" onclick="a12(event)">Input A</button>
+        <button type="submit" onclick="b6()">Input B</button>
+
+
+        <script>
+            function result(e) {
+                event.preventDefault()
+                var input1 = document.getElementById("input1").value
+                var input2 = document.getElementById("input2").value
+
+                console.log(input2 + input1);
+            }
+
+            var a = 12;
+            var b = 6;
+            var a = a - b;
+            // console.log(a);
+            var b = a + 6;
+            // console.log(b);
+
+            function a12(e){
+                event.preventDefault()
+                var b = document.getElementById("inputB").value
+                
+
+                console.log(b);
+            }
+
+            function b6(e){
+                event.preventDefault()
+                var a = document.getElementById("inputA").value
+                
+                console.log(a);
+            }
+
+
+
+
+
+
+        </script>
+</body>
+
+</html>
