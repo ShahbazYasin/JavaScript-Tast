@@ -68,44 +68,102 @@
         <button type="submit" onclick="a12(event)">Input A</button>
         <button type="submit" onclick="b6()">Input B</button>
 
+        <p></p>
 
-        <script>
-            function result(e) {
-                event.preventDefault()
-                var input1 = document.getElementById("input1").value
-                var input2 = document.getElementById("input2").value
+        <p>Q.3 To solve the roots of a quadratic equation where input are a, b, c?</p>
+        <form>
+            <label>
+                Input-a:
+                <input type="number" id="inputa">
+            </label>
 
-                console.log(input2 + input1);
-            }
+            <br><br>
+            <label>
+                Input-b:
+                <input type="number" id="inputb">
+            </label>
 
-            var a = 12;
-            var b = 6;
-            var a = a - b;
-            // console.log(a);
-            var b = a + 6;
-            // console.log(b);
+            <br><br>
 
-            function a12(e){
-                event.preventDefault()
-                var b = document.getElementById("inputB").value
-                
+            <label>
+                Input-c:
+                <input type="number" id="inputc">
+            </label>
 
-                console.log(b);
-            }
+            <br><br>
 
-            function b6(e){
-                event.preventDefault()
-                var a = document.getElementById("inputA").value
-                
-                console.log(a);
-            }
+            <button onclick="quardric(event)">quadratic eq</button>
 
 
+            <script>
+                function quardric(e) {
+                    event.preventDefault()
+
+                    var inputa = document.getElementById("inputa").value;
+                    var inputb = document.getElementById("inputb").value;
+                    var inputc = document.getElementById("inputc").value;
+
+                    var mul = inputb * inputb - 4 * inputa * inputc;
+                    // console.log(mul);
+                    var sqroot = parseInt(Math.sqrt(mul));
+                    var root1 = (-inputb + sqroot) / (2 * inputa);
+                    console.log(root1);
+                    var root2 = (-inputb - sqroot) / (2 * inputa);
+                    console.log(root2);
+                    // const input = prompt("input");
 
 
 
 
-        </script>
+
+
+
+                    function result(e) {
+                        event.preventDefault()
+                        var input1 = document.getElementById("input1").value
+                        var input2 = document.getElementById("input2").value
+
+                        console.log(input2 + input1);
+                    }
+
+                    var a = 12;
+                    var b = 6;
+                    var a = a - b;
+                    // console.log(a);
+                    var b = a + 6;
+                    // console.log(b);
+
+                    function a12(e) {
+                        event.preventDefault()
+                        var b = document.getElementById("inputB").value
+
+
+                        console.log(b);
+                    }
+
+                    function b6(e) {
+                        event.preventDefault()
+                        var a = document.getElementById("inputA").value
+
+                        console.log(a);
+                    }
+
+
+
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+            </script>
 </body>
 
 </html>
